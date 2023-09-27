@@ -1,0 +1,16 @@
+library("tidyverse")
+library("plotly")
+library("qqplotr")
+library("questionr")
+library("ggcorrplot")
+library("forcats")
+library("gapminder")
+library("vcd")
+library("DT")
+
+d_1<-read_csv("C:\\Users\\Administrator\\Desktop\\Francesco\\csv\\Abituale_Promozione_T.csv")
+d_2<-read_csv("C:\\Users\\Administrator\\Downloads\\Abituale_Promozione_T.csv")
+d_3<-union(d_1,d_2)
+setwd("C:\\Users\\Administrator\\Desktop")
+
+write.table(d_3,file="Abituale_Promozione_T.csv",sep=",",row.names=FALSE,col.names=TRUE)
